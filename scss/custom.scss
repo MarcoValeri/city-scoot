@@ -1,0 +1,24 @@
+// Import functions.scss file and related code 
+@import "./abstracts/functions";
+
+// Import font by Google font and set it inside a variable
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$lobster-font: 'Lobster', cursive;
+
+// Set font-weight inside a variable
+$new_weight: 900;
+
+// Set font btn
+$btn-font-family: $lobster-font;
+
+// Jumbotron
+$jumbotron-bg: #F0F6F6;
+
+// Set display-4 size using newSize() function
+$display4-size: newSize(4rem);
+
+// Font-weight default 
+$font-weight-bold: $new_weight;
+
+// Import bootstrap.scss file and related code
+@import "../bootstrap/scss/bootstrap.scss";

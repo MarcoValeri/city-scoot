@@ -1,0 +1,4 @@
+// Create a function that allows to set the size
+@function newSize($size) {
+    @return $size;
+}
