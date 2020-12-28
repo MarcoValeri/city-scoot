@@ -91,7 +91,7 @@
         </div>
 
         <div class="row mx-auto">
-            <section class="col-xs-12 col-sm-6 col-lg-3">
+            <!-- <section class="col-xs-12 col-sm-6 col-lg-3">
                 <div class="card border-dark mb-3">
                     <img class="card-img-top" src="../images/guide-placeholder-image.jpg" alt="Card image cap">
                     <div class="card-body text-info">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </section>
-            <section class="col-xs-12 col-sm-6 col-lg-3">
+            <section id="guides-output" class="col-xs-12 col-sm-6 col-lg-3">
                 <div class="card border-dark mb-3">
                     <img class="card-img-top" src="../images/guide-placeholder-image.jpg" alt="Card image cap">
                     <div class="card-body text-info">
@@ -135,7 +135,7 @@
                             - Blue Badge: Yes<br>
                         </p>
                     </div>
-                </div>
+                </div> -->
             </section>
             <section class="col-xs-12 col-sm-6 col-lg-3">
                 <div class="card border-dark mb-3">
@@ -208,9 +208,12 @@
     <script src="../scripts/popper.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
 
-    <!-- Add Firebase configuration -->
+    <!-- Import Firebase configuration -->
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <script src="../scripts/firebase-login.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <!-- Import add-guides.js and related code -->
+    <script src="../scripts/get-guides.js"></script>
 </body>
 
 </html>

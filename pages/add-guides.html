@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Import style.css and related code -->
+    <!-- Import style.scss and related code -->
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
 
-    <title>CityScoot Login</title>
+    <title>CityScoot Add Guides</title>
 </head>
 
 <body>
@@ -62,38 +62,60 @@
             </div>
         </nav>
     </header>
-    
-        <!-- Main -->
-        <main class="container mt-5 text-center">
-            <h5 id="loginStatus"></h5>
-            <form>
-                <div class="mb-3">
-                    <label id="txtEmailLabel" for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                    <label id="txtPasswordLabel" for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="txtPassword">
-                </div>
-                <button type="submit" class="btn btn-primary" id="btnLogin">Log In</button>
-                <button type="submit" class="btn btn-primary" id="btnSignup">Sign Up</button>
-                <button type="submit" class="btn btn-primary" id="btnLogout">Log Out</button>
-            </form>
-        </main>
 
-        <!-- Import jQuery 3.5.1 | popper.js | bootstrap.js -->
-        <script src="../scripts/jquery-3.5.1.min.js"></script>
-        <script src="../scripts/popper.min.js"></script>
-        <script src="../scripts/bootstrap.min.js"></script>
+    <!-- Main -->
+    <main class="container">
+        <div id="form-msg">
+            <h5>Your guide has been submitted</h5>
+        </div>
+        <form id="form-guides">
+            <div class="mb-3">
+                <label for="inputID" class="form-label">ID</label>
+                <input type="number" class="form-control" id="inputID">
+            </div>
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName">
+            </div>
+            <div class="mb-3">
+                <label for="inputLastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="inputLastName">
+            </div>
+            <div class="mb-3">
+                <label for="inputAge" class="form-label">Age</label>
+                <input type="number" class="form-control" id="inputAge">
+            </div>
+            <div class="mb-3">
+                <label for="inputOccupation" class="form-label">Occupation</label>
+                <input type="text" class="form-control" id="inputOccupation">
+            </div>
+            <div class="mb-3">
+                <label for="inputBlueBadge" class="form-label">Blue Badge</label>
+                <input type="text" class="form-control" id="inputBlueBadge">
+            </div>
+            <div class="mb-3">
+                <label for="inputTour" class="form-label">Tours</label>
+                <input type="text" class="form-control" id="inputTour">
+            </div>
+            <div class="mb-3">
+                <label for="inputImg" class="form-label">Image</label>
+                <input type="text" class="form-control" id="inputImg">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
 
-        <!-- Import Firebase configuration -->
-        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-        <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-        <!-- Import firebase-login.js and related code -->
-        <script src="../scripts/firebase-login.js"></script> 
+    <!-- Import jQuery 3.5.1 | popper.js | bootstrap.js -->
+    <script src="../scripts/jquery-3.5.1.min.js"></script>
+    <script src="../scripts/popper.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+
+    <!-- Import Firebase configuration -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <!-- Import add-guides.js and related code -->
+    <script src="../scripts/add-guides.js"></script>
 </body>
 
 </html>
