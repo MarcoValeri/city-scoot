@@ -8,7 +8,10 @@
     <!-- Import style.css and related code -->
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
 
-    <title>CityScoot Routes</title>
+    <!-- Add Font Awesome -->
+    <script src="https://kit.fontawesome.com/25e71e3313.js" crossorigin="anonymous"></script>
+
+    <title>CityScoot Login</title>
 </head>
 
 <body>
@@ -18,7 +21,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                 <li class="breadcrumb-item">Pages</li>
-                <li class="breadcrumb-item active"><a href="./guides.html">Guides</a></li>
+                <li class="breadcrumb-item active"><a href="./favourites.html">Favorite</a></li>
             </ol>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,7 +46,7 @@
                             <a class="dropdown-item" href="./route.html">Route</a>
                         </div>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="./guides.html">Guides</a>
                     </li>
                     <li class="nav-item">
@@ -55,7 +58,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contact us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="./favourites.html">Favourite</a>
                     </li>
                     <li class="nav-item">
@@ -64,36 +67,36 @@
                 </ul>
             </div>
         </nav>
-        <div class="jumbotron text-center">
-            <h1 class="display-4">CityScoot</h1>
-            <h2>Guides</h2>
-            <hr class="my-4">
-            <p class="lead">CityScoot guides have detailed, in-depth knowledge of London’s highlights as well as its
-                lesser known attractions.</p>
-            <hr class="my-4">
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#service" role="button">Learn more</a>
-            </p>
-        </div>
     </header>
 
     <!-- Main -->
-    <main class="container-fluid">
-        <div class="row">
-            <section class="col text-center">
-                <div id="service" class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                        <img src="../images/guide-icon.png" class="img-fluid mt-2 mb-5" alt="Responsive image">
-                        <h2 class="display-4">Routes</h2>
-                        <p class="lead">They will take you along rivers, down canal towpaths, through hidden streets,
-                            through busting markets. Many of our guides are qualified lawyers, doctors, architects and
-                            historians, bringing their specialist knowledge to their work.</p>
-                    </div>
-                </div>
-            </section>
+    <main class="container mt-5 text-center">
+
+        <!-- Test delete btn -->
+        <h1>Test</h1>
+        <button id="test-btn">Remove</button>
+
+        <!-- Favorite table -->
+        <div class="table-responsive">
+            <table class="table text-center" id="routes-data">
+                <thead class="thead-dark">
+                    <th scope="col">Name</th>
+                    <th scope="col">Day</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Images</th>
+                    <th scope="col">Highlights</th>
+                    <th scope="col">Start Lat</th>
+                    <th scope="col">End Lat</th>
+                    <th scope="col">Start Lng</th>
+                    <th scope="col">End Lng</th>
+                    <th scope="col">Delete</th>
+                </thead>
+                <tbody id="routes-data-output"></tbody>
+            </table>
         </div>
-        <div id="guides-output" class="row mx-auto">
-        </div>
+
+        <!-- status message -->
+        <div class="alert" role="alert" id="routes-msg"></div>
     </main>
 
     <!-- Footer -->
@@ -148,12 +151,8 @@
     <script src="../scripts/popper.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
 
-    <!-- Import Firebase configuration -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-    <!-- Import add-guides.js and related code -->
-    <script src="../scripts/get-guides.js"></script>
+    <!-- Import get-route-favorites.js and related code -->
+    <script src="../scripts/get-route-favorites.js"></script>
 </body>
 
 </html>

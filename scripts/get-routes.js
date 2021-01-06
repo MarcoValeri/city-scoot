@@ -42,7 +42,7 @@ function displayRoutes() {
                 data.routes[i].day + "</td><td>" +
                 data.routes[i].time + "</td><td>" +
                 data.routes[i].highlights + "</td><td>" +
-                "<a href='route.html?routeID=" + data.routes[i].routeID + "' class='btn btn-sm btn-primary'>Details</a>" + 
+                "<a href='route.html?routeID=" + data.routes[i].routeID + "' class='btn btn-sm btn-primary'>Details</a>" +
                 "</td></tr>";
 
             }

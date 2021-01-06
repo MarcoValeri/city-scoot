@@ -21,25 +21,28 @@
         let guideTour = snap.child("guide_tour").val();
         let guideImg = snap.child("guide_img").val();
 
-        $("#guides-output").append(
-            `
-            <section class="col-xs-12 col-sm-6 col-lg-3">
-                <div class="card border-dark mb-3">
-                    <img class="card-img-top" src="../images/${guideImg}" alt="Card image cap">
-                    <div class="card-body text-info">
-                        <h5 class="card-title">Guide ${guideID}</h5>
-                        <p class="card-text">
-                            - Name: ${guideName} ${guideLastName}<br>
-                            - Age: ${guideAge}<br>
-                            - Tours: ${guideTour}<br>
-                            - Occupation: ${guideOccupation}<br>
-                            - Blue Badge: ${guideBlueBadge}<br>
-                        </p>
+        if (guideBlueBadge !== 'No') {
+            $("#guides-output").append(
+            
+                `
+                <section class="col-xs-12 col-sm-6 col-lg-3">
+                    <div class="card border-dark mb-3">
+                        <img class="card-img-top" src="../images/${guideImg}" alt="Card image cap">
+                        <div class="card-body text-info">
+                            <h5 class="card-title">Guide ${guideID}</h5>
+                            <p class="card-text">
+                                - Name: ${guideName} ${guideLastName}<br>
+                                - Age: ${guideAge}<br>
+                                - Tours: ${guideTour}<br>
+                                - Occupation: ${guideOccupation}<br>
+                                - Blue Badge: ${guideBlueBadge}<br>
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            `
-        );
+                </section>
+                `
+            );
+        }
 
     });
 

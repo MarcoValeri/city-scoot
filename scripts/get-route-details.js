@@ -42,11 +42,11 @@ function displayRouteDetails() {
                     data.routes[i].day + "</td><td>" +
                     data.routes[i].time + "</td><td>" +
                     data.routes[i].highlights + "</td><td>" +
-                    "<img src='../images/" + data.routes[i].image +"'></td><td>" +
+                    "<img class='img-fluid' src='../images/" + data.routes[i].image +"'></td><td>" +
                     data.routes[i].startLat + "</td><td>" +
                     data.routes[i].startLng + "</td><td>" +
                     data.routes[i].endLat + "</td><td>" +
-                    data.routes[i].endLng + "</td>";
+                    data.routes[i].endLng + "</td></td>";
                 }
 
             }
