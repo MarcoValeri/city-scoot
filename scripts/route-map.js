@@ -3,7 +3,7 @@ function initMap() {
     const routeMap = {
         lat: 44.419675,
         lng: -110.584707
-    };
+	};
 
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8, 
