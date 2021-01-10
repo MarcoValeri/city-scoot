@@ -43,6 +43,7 @@
                             Routes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./routes.html">Routes</a>
                             <a class="dropdown-item" href="./route.html">Route</a>
                         </div>
                     </li>
@@ -72,10 +73,6 @@
     <!-- Main -->
     <main class="container mt-5 text-center">
 
-        <!-- Test delete btn -->
-        <h1>Test</h1>
-        <button id="test-btn">Remove</button>
-
         <!-- Favorite table -->
         <div class="table-responsive">
             <table class="table text-center" id="routes-data">
@@ -97,6 +94,33 @@
 
         <!-- status message -->
         <div class="alert" role="alert" id="routes-msg"></div>
+
+        <!-- Remove allert -->
+        <div class="modal fade" id="favorites-modal" tabindex="-1" role="dialog" aria-labelledby="favorites-modal" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Favorites</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Removed to favorite</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Remove btn -->
+        <button id="remove-btn" class="btn btn-info mt-3" data-toggle="modal" data-target="#favorites-modal">
+            Remove to favorite
+           <i class="fas fa-star"></i>
+        </button>
+
     </main>
 
     <!-- Footer -->

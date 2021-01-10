@@ -44,6 +44,7 @@
                             Routes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./routes.html">Routes</a>
                             <a class="dropdown-item" href="./route.html">Route</a>
                         </div>
                     </li>
@@ -88,38 +89,8 @@
                     <div class="container">
                         <img src="../images/soho-image.jpg" class="img-fluid mt-2 mb-5" alt="Responsive image">
 
-                        <!-- Favorite btn -->
-                        <div class="modal fade" id="favorites-modal" tabindex="-1" role="dialog" aria-labelledby="favorites-modal" aria-hidden="true">
-                            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Favorites</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Added to Favorites
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                            <span data-toggle="tooltip" data-placement="right" title="Add to Favorites">
-                                <button id="addtofavorites" class="btn btn-info mt-3" data-toggle="modal" data-target="#favorites-modal">
-                                   <i class="fas fa-star"></i>
-                                </button>
-                            </span>
-                            </div>
-                        </div>
-
-                        <!-- new table -->
-                        <div class="table-responsive">
+                        <!-- Route table -->
+                        <div class="table-responsive mt-5">
                             <table class="table text-center" id="routes-data">
                                 <thead class="thead-dark">
                                     <th scope="col">Name</th>
@@ -136,8 +107,40 @@
                             </table>
                         </div>
                 
-                        <!-- status message -->
+                        <!-- Status message -->
                         <div class="alert" role="alert" id="routes-msg"></div>
+
+                        <!-- Favorite Allert -->
+                        <div class="modal fade" id="favorites-modal" tabindex="-1" role="dialog" aria-labelledby="favorites-modal" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Favorites</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Added to Favorites</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favorite btn -->
+                        <div class="row">
+                            <div class="col">
+                            <span data-toggle="tooltip" data-placement="right" title="Add to Favorites">
+                                <button id="addtofavorites" class="btn btn-info mt-3" data-toggle="modal" data-target="#favorites-modal">
+                                    Add to favorite
+                                   <i class="fas fa-star"></i>
+                                </button>
+                            </span>
+                            </div>
+                        </div>
 
                         
                     </div>
@@ -145,10 +148,10 @@
             </section>
         </div>
 
+        <!-- Maps -->
         <div class="row mt-5">
             <section class="col">
                 <div class="container mb-5">
-                    <!-- Maps -->
                     <h2>Maps</h2>
                     <div id="map" style="height: 70vh;" class="mt-5"></div>
                     <div id="map-msg"></div>
@@ -216,10 +219,8 @@
     <!-- Import add-to-favorites.js and related code -->
     <script src="../scripts/add-to-favorites.js"></script>
 
-    <!-- Import route-map.js and related code -->
-    <script src="../scripts/route-map.js"></script>
     <!-- Import user-location.js and related code -->
-    <script src="../scripts/user-location.js"></script>
+    <!-- <script src="../scripts/user-location.js"></script> -->
     <!-- Import Google Maps API -->
     
 </body>

@@ -3,7 +3,7 @@ window.onload = getFavoriteRoutes;
 let xhr = false;
 
 // Test 
-const removeBtn = document.getElementById("test-btn");
+const removeBtn = document.getElementById("remove-btn");
 
 // Declare a function that gets the data through the data/routes.json file
 function getFavoriteRoutes() {
