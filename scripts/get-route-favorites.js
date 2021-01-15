@@ -48,15 +48,13 @@ function displayFavoriteRoutes() {
                         ${data.routes[i].startLat}</td><td>
                         ${data.routes[i].endLat}</td><td>
                         ${data.routes[i].startLng}</td><td>
-                        ${data.routes[i].endLng}</td><td>
-                        <button id='${data.routes[i].routeID}'><i class='far fa-trash-alt'></i></button>
+                        ${data.routes[i].endLng}
                         </td>
                         `;
 
                         // Event that removes all favorites
                         removeBtn.addEventListener("click", () => {
-                            localStorage.removeItem("routes", 'Soho');
-                            console.log(`Deleted`);
+                            localStorage.removeItem("routes");
                         });
                     }
                 }
